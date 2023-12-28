@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style/css/yes_styles.css">
+    <style>
+        #countup {
+            font-size: 2em; 
+            color: #ffffff; 
+            text-align: center;
+            font-weight: bold;
+        }
+
+        body {
+            background: linear-gradient(45deg, #040219, #1a0c4d); /* Gradient background */
+            overflow: hidden;
+            margin: 0; /* Remove default margin */
+            animation: gradientAnimation 8s infinite alternate; /* Add gradient animation */
+        }
+
+        @keyframes gradientAnimation {
+            0%, 100% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+        }
+
+
+.modal-content3 {
+    animation: popup 0.5s ease-in 0.5s 1 normal both;
+    width: 100%;
+    height: 100%;
+    background-image: url('style/images/fotos.jpg');
+    padding: 40px;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
+ #audio-container2 {
+    
+    opacity: 0;
+      }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <div id="audio-container2">
+        <audio controls autoplay id="myAudio2">
+            <source src="style/music/SpotifyMate.com - Those Eyes - New West.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <script>
+        var audioElement = document.getElementById("myAudio2");
+        audioElement.volume = 0.5;
+    </script>
+
+
+    <div class="container">
+        <div>
+            <h1 class="header_text">YUPPPIIII!!! 💖 </h1>
+        </div>
+        <div class="gif_container">
+
+        
+            <img class="img-gif" src="./style/images/cute-cat.gif" alt="Cute animated illustration">
+
+
+        </div>
+        <p class="text"> Estamos juntos à ...</p> 
+
+        <!-- Countdown Section -->
+        <div id="countup-container">
+            <p id="countup"></p>
+            <div class="buttons">
+               
+<button class="jan" id="janeiroButton" onclick="startAction3()">:D</button>
+                       
+<div id="myModal3" class="modal3">
+    <div class="modal-content3">
+        <span class="close3" onclick="closeModal3()">&times;</span>
+
+
+       <img class="img-P"
+        src="style/images/toppolaroid.png" 
+        alt="fotos">    <img class="img-P2"src="style/images/botpolaroid.png" alt="fotos2">   
+
+
+
+        <img class="img-AB"
+        src="style/images/AB.png" 
+        alt="Foto Zito">  
+        
+        <img class="img-Train"
+        src="style/images/TRAIN.png" 
+        alt="Foto Train"> 
+
+
+
+        <img class="img-01"
+        src="style/images/01.png" 
+         alt="Foto 01">  
+
+         <img class="img-02"
+          src="style/images/02.png" 
+         alt="Foto 02"> 
+
+
+         <img class="img-03"
+         src="style/images/29out.png" 
+          alt="Foto 03">  
+ 
+          <img class="img-04"
+           src="style/images/02dez.png" 
+          alt="Foto 04"> 
+
+        
+
+
+<div>
+
+    <!-- Include your other website content here -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date you started dating (format: year, month index starting from 0, day)
+            const startDate = new Date(2023, 11, 2); // 2nd of December 2023
+
+            // Function to update the countup
+            function updateCountup() {
+                const currentDate = new Date();
+                const timeDifference = currentDate - startDate;
+
+                // Calculate years, months, weeks, days, hours, minutes, and seconds
+                const anos = currentDate.getUTCFullYear() - startDate.getUTCFullYear();
+                const meses = currentDate.getUTCMonth() - startDate.getUTCMonth() + 12 * anos;
+                const weeks = Math.floor(timeDifference / (7 * 24 * 60 * 60 * 1000));
+                const days = Math.floor(timeDifference / (24 * 60 * 60 * 1000)) % 7;
+                const hours = currentDate.getUTCHours() - startDate.getUTCHours();
+                const minutes = currentDate.getUTCMinutes() - startDate.getUTCMinutes();
+                const seconds = Math.floor(timeDifference / 1000) % 60;
+
+                // Update the countup element
+                document.getElementById('countup').innerHTML = ` ${meses} Meses..    ${weeks} Semanas..    ${days}  Dias e   ${hours} Horas!!! `;
+            }
+
+            // Call the updateCountup function initially
+            updateCountup();
+
+            // Update the countup every second (1000 milliseconds)
+            setInterval(updateCountup, 1000);
+        });
+    </script>
+
+<script>
+    
+    function createStars() {
+    const numberOfStars = 200; // Adjust the number of stars as needed
+    const container = document.querySelector('.container');
+    const containerRect = container.getBoundingClientRect();
+
+    for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'stars';
+        container.appendChild(star);
+
+        const x = Math.random() * containerRect.width;
+        const y = Math.random() * containerRect.height;
+
+        star.style.left = `${x}px`;
+        star.style.top = `${y}px`;
+    }
+
+    
+}
+            
+        // Use the window.onload event to call the function after all resources are loaded
+        window.onload = createStars;
+    </script>
+
+<script> //Outubro
+
+        function startAction() {
+            // Abre text box de Outubro / Desaparece os outros meses
+            document.getElementById('myModal').style.display = 'flex';
+            document.getElementById('novembroButton').style.display = 'none';
+            document.getElementById('dezembroButton').style.display = 'none';
+            document.getElementById('janeiroButton').style.display = 'none';
+        }
+
+        function closeModal() {
+            // Close the modal box when the close button is clicked
+            document.getElementById('myModal').style.display = 'none';
+            document.getElementById('novembroButton').style.display = 'flex';
+            document.getElementById('dezembroButton').style.display = 'flex';
+            document.getElementById('janeiroButton').style.display = 'flex';
+        }
+</script>
+
+
+<script> // Novembro
+
+  function startAction1() {
+     // Abre text box de Novembro / Desaparece os outros meses
+    document.getElementById('myModal1').style.display = 'flex';
+    document.getElementById('outubroButton').style.display = 'none';
+    document.getElementById('dezembroButton').style.display = 'none';
+    document.getElementById('janeiroButton').style.display = 'none';
+  }
+
+  function closeModal1() {
+    // Close the modal box when the close button is clicked
+    document.getElementById('myModal1').style.display = 'none';
+    document.getElementById('outubroButton').style.display = 'flex';
+    document.getElementById('dezembroButton').style.display = 'flex';
+    document.getElementById('janeiroButton').style.display = 'flex';
+
+  }
+
+</script>
+
+
+<script> // Dezembro
+
+    function startAction2() {
+                    // Abre text box de Dezembro / Desaparece os outros meses
+
+        document.getElementById('myModal2').style.display = 'flex';
+        document.getElementById('outubroButton').style.display = 'none';
+        document.getElementById('novembroButton').style.display = 'none';
+        document.getElementById('janeiroButton').style.display = 'none';
+
+    }
+    
+    function closeModal2() {
+        // Close the modal box when the close button is clicked
+        document.getElementById('myModal2').style.display = 'none';
+        document.getElementById('outubroButton').style.display = 'flex';
+        document.getElementById('novembroButton').style.display = 'flex';
+        document.getElementById('janeiroButton').style.display = 'flex';
+    }
+</script>
+
+<script>   // fotos
+
+function startAction3() {
+                // Abre text box de Dezembro / Desaparece os outros meses
+
+    document.getElementById('myModal3').style.display = 'flex';
+    document.getElementById('outubroButton').style.display = 'none';
+    document.getElementById('novembroButton').style.display = 'none';
+    document.getElementById('dezembroButton').style.display = 'none';
+
+}
+
+function closeModal3() {
+    // Close the modal box when the close button is clicked
+    document.getElementById('myModal3').style.display = 'none';
+    document.getElementById('outubroButton').style.display = 'flex';
+    document.getElementById('novembroButton').style.display = 'flex';
+    document.getElementById('dezembroButton').style.display = 'flex';
+}
+
+</script>
+    
+</body>
+
+</html>

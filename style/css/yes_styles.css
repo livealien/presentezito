@@ -1,0 +1,575 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    background-color: #05021d;
+    background-image: url('style/images/stars.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Create stars */
+.stars {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #fff; /* Set star color to white */
+    animation: twinkling 2s infinite; /* Add twinkling animation */
+}
+
+
+
+/* Define twinkling animation */
+@keyframes twinkling {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+}
+
+
+@keyframes popup {
+    from {
+        transform: translateY(+1200px)
+    }
+    to {
+        transform: translateY(0px)
+    }
+}
+
+
+
+/* Position the "No" button absolutely within body */
+#noButton {
+    position: absolute;
+    margin-left: 150px;
+    transition: 0.5s;
+    /* Smooth movement */
+}
+
+#yesButton {
+    position: absolute;
+    margin-right: 150px;
+    /* Smooth movement */
+}
+
+#outubroButton {
+    position: absolute;
+    margin-top: 25px;
+    margin-right: 800px;
+}
+
+
+#novembroButton {
+    position: absolute;
+    margin-top: 25px;
+    margin-right: 470px;
+}
+
+
+#dezembroButton {
+    position: absolute;
+    margin-top: 25px;
+    margin-right: 130px;
+}
+
+#janeiroButton {
+    margin-top: 10px;
+    margin-right: 40px;
+    position: absolute;
+    text-align: center;
+}
+
+
+
+.out { 
+    font-weight: bold;
+    background-color: #180740;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s, background-color ;
+
+}
+
+.out:hover {
+    transform:translateY(-5px) ;
+    background-color: #0281af;
+}
+
+
+.nov { 
+    font-weight: bold;
+    background-color: #00b5f7;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s, background-color ;
+
+}
+
+.nov:hover {
+    transform:translateY(-5px) ;
+    background-color: #0281af;
+}
+
+
+
+.dez { 
+    font-weight: bold;
+    background-color: #00b5f7;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s, background-color ;
+
+}
+
+.dez:hover {
+    transform:translateY(-5px) ;
+    background-color: #0281af;
+}
+
+
+.jan { 
+    font-weight: bold;
+    background-color: #180740;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s, background-color ;
+
+}
+
+.jan:hover {
+    transform:translateY(-5px) ;
+    background-color: #483ab7;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-content {
+    animation: popup 0.7s ease-in 0.5s 1 normal both;
+    width: 100px;
+    height: 100px;
+    padding: 40px;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+}
+
+
+.close {
+    position: absolute;
+    top: 125px;
+    right: 200px;
+    cursor: pointer;
+    color: rgb(124, 121, 121);
+    font-size: 80px;
+    z-index: 2; 
+}
+
+.close:hover {
+    transform:translateY(-5px) ;
+}
+
+
+
+.modal1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-content1 {
+    animation: popup 0.5s ease-in 0.5s 1 normal both;
+    width: 100px;
+    height: 100px;
+    background-image: url('style/images/CR.jpg');
+    padding: 40px;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+}
+
+
+.close1 {
+    position: absolute;
+    top: 110px;
+    right: 200px;
+    cursor: pointer;
+    color: rgb(124, 121, 121);
+    font-size: 80px;
+    z-index: 2; 
+}
+
+.close1:hover {
+    transform:translateY(-5px) ;
+}
+
+
+
+
+.modal2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-content2 {
+    animation: popup 0.5s ease-in 0.5s 1 normal both;
+    width: 100px;
+    height: 100px;
+    background-image: url('style/images/dezbg.jpg');
+    padding: 40px;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+}
+
+
+.close2 {
+    position: absolute;
+    top: 110px;
+    right: 200px;
+    cursor: pointer;
+    color: rgb(124, 121, 121);
+    font-size: 80px;
+    z-index: 2; 
+}
+
+.close2:hover {
+    transform:translateY(-5px) ;
+}
+
+
+.modal3 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-content3 {
+    animation: popup 0.5s ease-in 0.5s 1 normal both;
+    width: 100px;
+    height: 100px;
+    background-image: url('style/images/fotos.jpg');
+    padding: 40px;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+}
+
+
+.close3 {
+    z-index: 5;
+    position: absolute;
+    top: 880px;
+    right: 100px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 80px;
+    z-index: 2; 
+}
+
+.close3:hover {
+    transform:translateY(-5px) ;
+}
+
+
+
+
+.header_text {
+    font-family: 'Terminus';
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.text {
+    font-family: 'Terminus';
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    /* optional: adds some space between the buttons */
+}
+
+.btn {
+    background-color: #FFB6C1;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FAF9F6;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img-AB {
+    z-index: 3;
+    transform: rotate(-11deg);
+   position: relative;
+   top: -60px;
+   left: -1100px;
+   width: 220px;
+   height: 250px;
+   background-image: 100%;
+   background-position:center;
+}
+
+.img-Train {
+    z-index: 4;
+    position: relative;
+    width: 220px;
+    height: 250px;
+    top: -5px;
+    left: -1125px;
+   background-image: 100%;
+   background-position:center ;
+
+   }
+
+
+   .img-01 {
+    z-index: 2;
+position: relative;
+top: +30px;
+left: -870px;
+transform: rotate(-10deg);
+width: 220px;
+height: 280px;
+
+}
+
+
+.img-02 {
+    z-index: 2;
+    position: relative;
+    transform: rotate(+16deg);
+    width: 220px;
+    height: 250px;
+    top: -360px;
+    left: 380px;
+   background-image: 100%;
+   background-position:center ;
+
+   }
+
+
+   .img-03 {
+    z-index: 3;
+    position: relative;
+    top: -330px;
+    left: -410px;
+    transform: rotate(+11deg);
+    width: 220px;
+    height: 280px;
+    background-image: 100%;
+    background-position:center ;
+    }
+    
+    
+    .img-04 {
+        z-index: 4;
+        position: relative;
+        transform: rotate(-6deg);
+        width: 220px;
+        height: 250px;
+        top: -410px;
+        left: 140px;
+       background-image: 100%;
+       background-position:center ;
+    
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Out1 {
+    position: relative;
+    font-family: 'Terminus';
+    font-size: 90px;
+    font-weight: bold;
+     color: rgb(124, 121, 121);
+    text-align: right;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    margin-right: 200px;
+}
+
+.Out2 {
+    position: relative;
+    word-spacing: 12px;
+    font-family: 'Terminus';
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 210px;
+    margin-bottom: 0px;
+    margin-inline-end: 40%;
+    margin-inline-start: 4%;
+   
+}
+
+.Out3 {
+    position: relative;
+    font-family: 'Terminus';
+    font-size: 90px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 0px;
+}
+
+.Out4 {
+    position: relative;
+    word-spacing: 12px;
+    font-family: 'Terminus';
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(6, 6, 6);
+    text-align: left;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    margin-inline-end: 30%;
+    margin-inline-start: 2%;
+   
+}
+
+.img-P {
+    z-index: 2;
+    position: relative;
+
+    width: 1000px;
+    height: 500px;
+    left: -150px;
+    top: 79px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+   
+}
+
+.img-P2 {
+    transform: rotate(+4deg);
+    z-index: 2;
+    position: absolute;
+    top: 70px;
+    width: 1000px;
+    height: 500px;
+    right: -50px ;
+}
+
+#audio-container2 {
+    opacity: 0;
+      }

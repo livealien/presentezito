@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style/css/styles.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #040219, #1a0c4d); /* Gradient background */
+            overflow: hidden;
+            margin: 0; /* Remove default margin */
+            animation: gradientAnimation 8s infinite alternate; /* Add gradient animation */
+        }
+
+        @keyframes gradientAnimation {
+            0%, 100% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Set container to full viewport height */
+        }
+
+        /* Create stars */
+        .stars {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff; /* Set star color to white */
+            animation: twinkling 5s infinite; /* Add twinkling animation */
+        }
+
+        /* Define twinkling animation */
+        @keyframes twinkling {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(0.5);
+                opacity: 0.5;
+            }
+        }
+
+        /* Create glowing moon */
+        .moon {
+            position: absolute;
+            top: 70px;
+            right: 70px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #cacac7; /* Moon color */
+            box-shadow: 0 0 20px #4f4f4d; /* Glow effect */
+            animation: moonGlow 2s infinite alternate; /* Add glowing animation */
+        }
+
+        @keyframes moonGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px #e6e6e3;
+            }
+            50% {
+                box-shadow: 0 0 40px #3b3b39;
+            }
+        }
+
+  #audio-container {
+    
+opacity: 0;
+  }
+
+
+
+    </style>
+</head> 
+<body>
+
+    
+
+    <div id="audio-container">
+        <audio controls autoplay id="myAudio">
+            <source src="style/music/SpotifyMate.com - Those Eyes - New West.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <script>
+        
+        var audioElement = document.getElementById("myAudio");
+        audioElement.volume = 0.5;
+    </script>
+
+
+
+        </div>
+
+        <div class="container">
+        <div>
+            <h1 class="header_text">OLÁ ZITOOO!!!! ESTÁS PRONTO?</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">SIM</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()">NÃO</button>
+        </div>
+
+        <!-- Add glowing moon -->
+        <div class="moon"></div>
+    </div>
+
+    <script>
+        function createStars() {
+            const numberOfStars = 200; // Adjust the number of stars as needed
+            const container = document.querySelector('.container');
+            const containerRect = container.getBoundingClientRect();
+
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'stars';
+                container.appendChild(star);
+
+                const x = Math.random() * containerRect.width;
+                const y = Math.random() * containerRect.height;
+
+                star.style.left = `${x}px`;
+                star.style.top = `${y}px`;
+            }
+        }
+
+        // Use the window.onload event to call the function after all resources are loaded
+        window.onload = function () {
+            createStars();
+        };
+    </script>
+
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
